@@ -73,7 +73,8 @@ int main() {
           else memory[var] = expression;
         }
       } else {
-        cout << "SNOL> Unknown word [" <<
+        if(var=="PRINT"||var=="BEG") cout<< "SNOL> Invalid word ["<<var<<"].";
+        else cout << "SNOL> Unknown word [" <<
           var << "].";
         continue;
       }
