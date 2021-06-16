@@ -435,7 +435,7 @@ string convertToMath(string input, unordered_map < string, string > memory, stri
   return result;
 }
 
-
+//A function to check the operator precedence of the passed operator.
 int operatorPriority(char c) {
   if (c == '%')
     return 5;
@@ -451,7 +451,7 @@ int operatorPriority(char c) {
     return -1;
 }
 
-//function to evaluate int operands
+//A function to do arithmetic operation, and return the result.
 int evalIntOp(char op, int val1, int val2) {
   switch (op) {
   case '+':
@@ -467,7 +467,7 @@ int evalIntOp(char op, int val1, int val2) {
   }
 }
 
-//function to evaluate double operands
+//A function to do arithmetic operation on floating variables.
 double evalDoubleOp(char op, double val1, double val2) {
   switch (op) {
   case '+':
@@ -481,7 +481,7 @@ double evalDoubleOp(char op, double val1, double val2) {
   }
 }
 
-// helper function to determine data type
+//A function to determine the data type of a number.
 int checkDataType(string result) {
   int i, flag = 0;
 
@@ -494,7 +494,8 @@ int checkDataType(string result) {
   return flag;
 }
 
-//evaluates the float expression
+//A function to evaluate a postfix notation that has a data type
+//of float.
 string floatEval(string postfix) {
   ostringstream ss;
   ss.precision(10);
@@ -564,7 +565,8 @@ string floatEval(string postfix) {
   return results;
 }
 
-//evaluates int expression
+//A function to evaluate a postfix notation that has a data type
+//of integer.
 string intEval(string postfix) {
   stack < int > operands;
   int i, val1 = 0, val2 = 0;
@@ -613,6 +615,8 @@ string intEval(string postfix) {
   return results;
 }
 
+//A function to evaluate an infix notation, uses the helper functions above to
+//evaluate the said notation. It converts the notation from infix to postfix notation.
 string evaluate(string infix) {
   stack < char > charstack;
   string result;
