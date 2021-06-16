@@ -11,6 +11,28 @@
 
 using namespace std;
 
+/*PSEUDOCODE
+    -Check for assignment operation
+        -Evaluate the LHS and RHS
+        -LHS must be a valid identifier
+        -RHS must be a valid arithmetic expression
+        -If both LHS and RHS are valid, store/update the variable in the memory
+        -Proceed to next command or input
+    -Check for command of either PRINT or BEG
+        -If command is PRINT
+          -Check if valid variable or literal
+          -If valid variable, then print its value
+          -If literal, then just print
+        -If command is BEG
+          -Check if valid identifier name
+          -If valid then prompt the user for input, and check the input
+          -If valid then store it in the memory with the key, `variable name`
+        -If not both command
+          -then check if valid expression
+          -If valid then compute
+    *Repeat until EXIT! is found*
+*/
+
 //The function prototypes of all the functions needed for the SNOL interpreter program.
 
 //---------- Utility Functions for error-checking----------------------//
@@ -328,7 +350,6 @@ string convertToMath(string input, unordered_map < string, string > memory, stri
         continue;
       }
       if (isOperator(input[ctr - 1])) {//If an operator is found before the negative sign.
-        cout<<input[ctr-1]<<" "<<input[ctr+1]<<endl;
         if (!isdigit(input[ctr + 1])) error = "Error! Unknown command, does not match any valid command of the language.";
         else neg = true;
         continue;
@@ -419,7 +440,6 @@ string convertToMath(string input, unordered_map < string, string > memory, stri
   if (terms != 1) {
     //If it is not a single term, check whether there are appropriate number of operators and operands.
     if (terms != op + 1) {
-      cout << number << " " << terms << " " << op << " " << eqn.back() << endl;
       error = "Error! Unknown command, does not match any valid command of the language.too many";
     }
   }
