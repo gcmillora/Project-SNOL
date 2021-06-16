@@ -7,6 +7,27 @@
     "deque": "cpp",
     "ostream": "cpp",
     "iostream": "cpp",
-    "regex": "cpp"
+    "regex": "cpp",
+    "unordered_map": "cpp",
+    "__functional_base": "cpp",
+    "__functional_base_03": "cpp",
+    "__hash_table": "cpp",
+    "__tuple": "cpp",
+    "algorithm": "cpp",
+    "array": "cpp",
+    "chrono": "cpp",
+    "cstddef": "cpp",
+    "type_traits": "cpp",
+    "functional": "cpp",
+    "iterator": "cpp",
+    "limits": "cpp",
+    "memory": "cpp",
+    "ratio": "cpp",
+    "tuple": "cpp",
+    "ios": "cpp",
+    "stack": "cpp",
+    "__split_buffer": "cpp",
+    "string_view": "cpp",
+    "vector": "cpp"
   }
 }
